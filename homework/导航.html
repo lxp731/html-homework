@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航</title>
+    <style>
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .list{
+            width: 1000px;
+            height: 33px;/* 清除浮动 */
+            line-height: 33px;
+            /* overflow: hidden; (清除浮动)*/
+            /* position: relative; */
+        }
+
+        .list>li{
+            /* li只是.list的子元素，不是孙元素的li */
+            width: 150px;
+            height: 33px;
+            background-color: #999;
+            text-align: center;
+            margin-left: 1px;
+            float: left;
+            position: relative;
+        }
+
+        .list>li>a{
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-family: "幼圆";
+        }
+
+        .list>li ul{
+            position: absolute;
+            left: 0;
+            top: 33px;
+            width: 100%;
+            display: none;
+        }
+
+        .list>li ul>li{
+            background-color: #ddd;
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: #f00;
+        }
+
+        .list>li:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">新闻</a>
+            <ul>
+                <li>
+                    <a href="#">国内新闻</a>
+                </li>
+                <li>
+                    <a href="#">国内新闻</a>
+                </li>
+                <li>
+                    <a href="#">国内新闻</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">赛事</a>
+            <ul>
+                <li>
+                    <a href="#">篮球</a>
+                </li>
+                <li>
+                    <a href="#">篮球</a>
+                </li>
+                <li>
+                    <a href="#">篮球</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">娱乐</a>
+            <ul>
+                <li>
+                    <a href="#">综艺</a>
+                </li>
+                <li>
+                    <a href="#">综艺</a>
+                </li>
+                <li>
+                    <a href="#">综艺</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
