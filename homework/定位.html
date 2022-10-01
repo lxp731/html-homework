@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        #box{
+            height: 500px;
+            width: 500px;
+            border: 2px solid #000;
+            background-color: #ff9;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        #r1,#r2{
+            height: 100px;
+            width: 100px;
+        }
+
+        #r1{
+            background-color: #0fc;
+            position: relative;
+            /* top: 10px; */
+            /* bottom: 10px; */
+            z-index: 3;
+        }
+
+        #r2{
+            background-color: rgb(231, 15, 80);
+            /* position: relative; */
+        }
+
+        #a1{
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgb(241, 226, 6);
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="r1">相对定位r1</div>
+        <div id="r2">相对定位r2</div>
+        <div id="a1">绝对定位a1</div>
+    </div>
+</body>
+</html>

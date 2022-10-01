@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 600px;
+            height: 200px;
+            border: 10px red solid;
+        }
+
+        .inner{
+            /* width 的默认值就是auto */
+            width: 250px;
+            height: 200px;
+            background-color: #bfa;
+            margin:0 auto;
+        }
+        /* 
+            -如果将宽度和一个外边距设置为auto，宽度始终会是最大
+            -如果 两个外边距 和 宽度 都是auto ，宽度始终是最大
+            -如果 两个外边距 是auto ，宽度是固定，则两个外边距相等（inner 居中显示）
+            eg:
+                width:xxxpx;
+                margin : 0 auto; 0是上下外边框是0，auto是左右外边距。
+        */
+
+    </style>
+
+
+</head>
+<body>
+    <div class="outer">
+
+        <div class="inner"></div>
+
+    </div>
+</body>
+</html>

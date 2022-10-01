@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>框模型</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background-color: #000;
+            color: #fff;
+            font-size: 60px;
+            font-family: "楷体";
+            border: 1px solid #f00;
+        }
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            font-size: 50px;
+            border-style: dashed;
+            /* margin:上 右 下 左 */
+            margin: 50px;
+            /* padding:上 右 下 左 */
+            padding: 50px;
+        }
+
+        .box2{
+            /* 上下，左右 */
+            /* margin: 50px 100px; */
+            /* 左右margin为auto时盒子居中 */
+            margin: 30px;
+            /* 上、左右、下 */
+            padding: 60px 50px 40px;
+            border-right: 3px solid #0f0;
+        }
+
+        .box3{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: radial-gradient(#000,#d00);
+        }
+
+        .box4{
+            margin: auto;
+            /* CSS3样式 */
+            /* border-radius: 50% 100%; */
+            background: linear-gradient(#000,#d00,#00f);
+        }
+
+    /* https://www.cnblogs.com/hellocd/p/filter.html */
+    /* https://www.cnblogs.com/hellocd/p/textbg.html */
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        盒子内容
+    </div>
+
+    <div class="box2">
+        盒子内容
+    </div>
+
+    <div class="box3">
+        盒子内容
+    </div>
+
+    <div class="box4">
+        盒子内容
+    </div>
+</body>
+</html>

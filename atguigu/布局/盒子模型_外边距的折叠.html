@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,
+        .box2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: #bfa;
+            margin-bottom: 50px;
+        }
+
+        .box2 {
+            margin-top: 100px;
+            background-color: red;
+            margin-bottom: 50px;
+        }
+
+        /* 
+            box1和box2的外边距发生了重叠的现象。盒子1的下边距是50，
+            盒子2的上边距是100，结果会按着边距大的那个边距来
+        */
+
+        .box3 {
+            width: 200px;
+            height: 100px;
+            padding-top: 100px;
+            background-color: aqua;
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+        }
+
+        /* 
+            父子元素相邻的外边距，子元素会传递给父元素
+        */
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box1{
+            width: 100px;
+            background-color: red;
+        }
+
+        .box2{
+            width: 100px;
+            background-color: green;
+        }
+
+        .box3{
+            background-color: aquamarine;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+        文档流（normal flow）
+            网页是一个多层的结构
+            通过CSS可以为每一层设置样式
+            用户只能看到最上面一层
+            最下面一层就是文档流
+
+            元素在文档流的特点
+                块元素
+                    独占一行
+                    默认宽度是父元素的全部
+                    默认高度是被内容撑开的
+                行内元素
+                    不会独占一行，只占自身大小
+                    排满则换行
+                    默认高度和宽度都是被内容撑开的
+     -->
+
+     <div class="box1">one</div>
+     <div class="box2">two</div>
+     <span class="box3">three</span>
+     <span class="box3">four</span>
+
+</body>
+</html>

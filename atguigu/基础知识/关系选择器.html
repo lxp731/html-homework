@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>关系选择器</title>
+    <style>
+        /* 父子选择器 */
+        div>p {
+            color: pink;
+        }
+
+        /* 祖先选择器 */
+        div span {
+            color: rgb(221, 9, 207);
+        }
+
+        /* 下一个兄弟 */
+        p+div{
+            color: aquamarine;
+        }
+
+        /* 
+    p 底下所有的span元素被选中
+    p ~ span{
+
+    }
+*/
+    </style>
+</head>
+
+<body>
+    <div>
+        一去二三里
+        <p>
+            烟村四五家
+            <span>
+                <br>
+                亭台六七座
+            </span>
+        </p>
+        <div>
+            PS：这么多亭子
+        </div>
+        <span>
+            八九十枝花
+        </span>
+    </div>
+</body>
+
+</html>

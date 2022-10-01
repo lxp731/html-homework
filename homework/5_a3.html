@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_a3</title>
+    <style>
+        ul,p{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+            color: #000;
+        }
+
+        img{
+            border: none;
+            display: block;
+        }
+
+        .main{
+            width: 1000px;
+            overflow: hidden;
+        }
+
+        .main li{
+            float: left;
+            margin: 2px;
+        }
+
+        .left{
+            /* position: relative; */
+            width: 430px;
+            height: 320px;
+        }
+
+        .left a{
+            position: relative;
+        }
+
+        .left p{
+            position: absolute;
+            font-size: 16px;
+            width: 100%;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(31, 30, 30, 0.432);
+            left: 0;
+            bottom: 0;
+        }
+
+        .left a:hover p{
+            color: #f00;
+            text-decoration: underline;
+        }
+        .middle a{
+            position: relative;
+        }
+
+        .middle p{
+            position: absolute;
+            font-size: 16px;
+            width: 100%;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(31, 30, 30, 0.432);
+            left: 0;
+            bottom: 0;
+        }
+
+        .middle a:hover p{
+            color: #f00;
+            text-decoration: underline;
+        }
+        .right a{
+            position: relative;
+        }
+
+        .right p{
+            position: absolute;
+            font-size: 16px;
+            width: 100%;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(31, 30, 30, 0.432);
+            left: 0;
+            bottom: 0;
+        }
+
+        .right a:hover p{
+            color: #f00;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li class="left">
+            <a href="#">
+                <img src="./resouse/1.jpg">
+                <p>电动小汽车</p>
+            </a>
+        </li>
+        <li class="middle">
+            <a href="#">
+                <img src="./resouse/2.jpg">
+                <p>电动小汽车</p>
+            </a>
+            <a href="#">
+                <img src="./resouse/3.jpg">
+                <p>电动小汽车</p>
+            </a>
+        </li>
+        <li class="right">
+            <a href="#">
+                <img src="./resouse/4.jpg">
+                <p>电动小汽车</p>
+            </a>
+            <a href="#">
+                <img src="./resouse/5.jpg">
+                <p>电动小汽车</p>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

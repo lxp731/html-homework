@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+            如果不设置父元素的尺寸，父元素的大小就被子元素的大小撑开
+            如果设置了该是多少就是多少
+
+            如果设置了父元素的尺寸，并且子元素的尺寸超过了父元素的尺寸
+            此时可以进行如下设置
+
+            选择器增加 overflow 设置，参数有：
+            visable (默认：超出显示) 
+            hidden （隐藏，一剪梅）
+            scroll (添加滚轮)
+            auto (根据需要生成滚动条)
+        */
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            overflow: auto;
+            /* 
+                over-flow-x:单独处理水平方向
+                over-flow-y:单独处理垂直方向
+            */
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+</html>

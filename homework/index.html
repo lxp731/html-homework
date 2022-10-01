@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--文档声明：表明该网页是HTML5的文档规范-->
+
+
+<html lang="en">
+    <!-- 中文 -->
+
+<head>
+    <meta charset="UTF-8">
+    <!--声明使用的编码格式，必须与软件显示的编码格式保持一致-->
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 主要是移动端的设置 -->
+
+
+    <title>跟着学</title>
+    <!-- 设置网页的标签的文字，同时是为浏览器检索提供的依据 -->
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!--
+    特殊实体的表示 
+      &nbsp;    空格
+      &gt;      大于号
+      &lt;      小于号
+      &copy;    版权符号
+-->
+
+<body>
+
+    <!-- 
+        h1-h6权重依次减小，一般一个网页只设置一个h
+        块元素，独占一行
+     -->
+    <h1>杂诗</h1>
+    <h2></h2>
+
+
+    <!-- 
+        p标签负责段落、文字的显示 
+        块元素，独占一行
+    -->
+    <p id="red">
+        落霞与孤鹜齐飞
+    </p>
+
+    <p>
+        秋水共长天一色
+    </p>
+
+    <p class="font">
+        儿童相见不相识
+    </p>
+
+    <p class="font">
+        笑问客从何处来
+    </p>
+
+    <div>
+        少小离家老大回
+    </div>
+
+    <span>
+        乡音无改鬓毛衰
+    </span>
+
+    <div class="orange">
+        I am franklin.
+    </div>
+
+
+
+
+    <!-- 
+        超链接
+        替换元素
+        blank打开一个网页标签来显示超链接，slef直接打开
+    -->
+    <a href="https://www.bing.com/" title="bing" target="_blank">必应</a>
+    
+    <br><br>
+
+    <!-- 
+        图片显示 
+        自结束标签
+        替换元素
+        alt：当加载不出来图片时，鼠标停留时，会显示文字信息，同时作为浏览器检索的依据
+    -->
+    <img width="200" src="../resource/hmbb.jpg" alt="海绵宝宝">
+
+    <br><br>
+    
+    
+    <!-- 
+        音频播放
+        controls:用户可以控制
+        loop:设置循环播放
+        一般情况下如下图写没毛病，对于一些老旧的浏览器可能不兼容需要进行修改
+        <audio src="./resource/Move Your Body - Sia.mp3" controls></audio>
+    -->
+    <audio controls>
+        <source src="../resource/monster.m4a">
+        <source src="../resource/monster.ogg">
+        <embed src="../resource/monster.m4a" type="audio/m4a" width="300" height="100">
+        </audio>
+        
+        <br><br>
+
+        <!-- 
+            视频播放
+            和音频一样
+            <video src="./resource/快乐人生-燃炸了！陈乐一翻唱核爆神曲《aLIEz》终于有人敢挑战了！(超清).mp4" controls></video>
+        -->
+        <video width="500" controls loop>
+            <source src="../resource/dark point.webm">
+            <embed src="../resource/dark point.webm" type="video/mp4">
+        </video>
+</body>
+
+</html>

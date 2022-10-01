@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类</title>
+
+    <style>
+        /* 
+            伪类一般都是以：开头
+            ul>li:first-child  选中第一个元素
+            ul>li:last-child    选中最后一个元素
+            ul>li:nth-child(3)  （）里面是几就选中几，如果是n就是全选
+            n: 0-正无穷
+            2n（even）:选中偶数位的元素
+            2n+1（odd）:选中奇数位的元素
+
+            只在同类型里生效
+            :first-of-child()
+            :last-of-type()
+            :nth-of-type()
+
+
+            以上伪类都是根据所有的子元素进行排序的
+
+            :not()  否定伪类
+        */
+
+        /* 选中列表第一个并设置为红色 */
+        ul>li:first-child{
+            color: tomato;
+        }
+
+        ul>li:last-child{
+            color: green;
+        }
+
+        ul>li:nth-child(3){
+            color: yellow;
+        }
+
+        /* ul>li:not(:nth-child(3)){
+            color: aqua;
+        } */
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+    </ul>
+</body>
+</html>

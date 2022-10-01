@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+
+    <style>
+        /* 
+            title= 就是这一个元素
+            title^ 以什么字符开头
+            title$ 以什么字符结束
+            title* 包含什么字符
+        */
+        p[title=abc] {
+            color: red;
+        }
+
+        p[title^=bc] {
+            color: orange;
+        }
+
+        p[title$=xz]{
+            color: aqua;
+        }
+
+        p[title*=liu]{
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <p title="abc">alice</p>
+    <p title="bcdef">frank</p>
+    <p title="bcdef">franklin</p>
+    <p title="helloxz">jone</p>
+    <p title="hiabcxz">jackson</p>
+    <p title="liuxp">jackson</p>
+    <p title="xliup">jackson</p>
+</body>
+
+</html>

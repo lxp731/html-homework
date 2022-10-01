@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <style>
+        form,body{
+            padding: 0;
+            margin: 0;
+        }
+        #fm>div{
+            display: flex;
+            border-bottom: 1px solid #000;
+            padding: 4px 12px;
+        }
+
+        #fm label{
+            font-size: 16px;
+            width: 80px;
+        }
+
+        #user,#pwd{
+            border-style: none;
+            outline-color: rgb(241, 10, 10);
+        }
+    </style>
+</head>
+<body>
+    <form action="http://www.baidu.com" name="form" id="fm">
+        <div>
+            <label for="user">用户：</label>
+            <input type="text" name="user" id="user" placeholder="请输入用户名" required>
+        </div>
+        <div>
+            <label for="pwd">密码：</label>
+            <input type="password" name="pwd" id="pwd" placeholder="请输入密码" required>
+        </div>
+        <div>
+            <input type="radio" name="gender" value="male" checked>男
+            <input type="radio" name="gender" value="female">女
+        </div>
+        <div>
+            <input type="checkbox" name="hobby" value="movie" checked>电影
+            <input type="checkbox" name="hobby" value="read">读书
+        </div>
+        <div>
+            <select name="province" id="area">
+                <option value="Hei">黑龙江</option>
+                <option value="Ji">吉林</option>
+                <option value="Liao" selected>辽宁</option>
+            </select>
+        </div>
+        <div>
+            <label for="pl">评论：</label>
+            <textarea name="pl" id="pl" cols="30" rows="10"></textarea>
+        </div>
+
+        <!-- HTML5表单 -->
+        <div>
+            <label for="em">电子邮件：</label>
+            <input type="email" id="em" name="em" placeholder="请输入电子邮件">
+        </div>
+        <div>
+            <label for="tele">电话：</label>
+            <input type="tel" id="tele" name="tele" placeholder="请输入电话" required>
+        </div>
+        <div>
+            <input type="text" disabled>
+        </div>
+        <div>
+            <label for="file">插入文件：</label>
+            <input type="file" id="file" name="file" required multiple>
+        </div>
+
+        <div>
+            <input type="submit" value="提交按钮">
+            <input type="button" value="普通按钮">
+            <input type="reset">
+            <button>按钮</button>
+        </div>
+    </form>
+</body>
+</html>

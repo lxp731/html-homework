@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            /* padding-bottom: 100px; */
+            margin-bottom: 100;
+            margin-right: 50px;
+            /* 
+                行内元素不支持设置宽高，他的宽高就是被内容区决定的
+                padding、border、margin都可以设置，不会影响页面的布局，
+                但是会覆盖
+                margin不会影响上下方向，
+                左右方向的边距是两个相邻的行内元素的和
+            */
+
+        }
+
+        .s2{
+            background-color: #bfa;
+            margin-left: 50px;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color:chocolate;
+        }
+
+        a{
+            display: block;
+            /* inline
+                block
+                inline-block 既可以设置宽高，但不会独占一行
+                none 元素不在页面中显示 隐藏菜单 不会占据页面的位置
+                table 将元素设置为一个表格
+
+                visibility 设置元素的显示状态
+                hidden 隐藏不显示， 但是会占据页面的位置
+            */
+            visibility: hidden;
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <a href="www.baidu.com">baidu</a>
+    <!-- <a href="www.baidu.com">baidu</a> -->
+    <span class="s1">我是span</span>
+    <span class="s2">我是span</span>
+    <div class="box1"></div>
+</body>
+</html>

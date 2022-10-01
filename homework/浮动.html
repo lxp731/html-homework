@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        /* 清楚浮动的方法（float后面的元素恢复正常）：
+            1、给需要浮动的子元素所在的父元素设置固定高度 
+            2、BFC
+                给需要浮动的子元素所在的父元素添加CSS属性：
+                overflow: hidden\auto
+            3、给需要浮动的子元素所在的父元素的后续兄弟元素添加CSS属性：
+                clear: both*/
+
+        h2,div{
+            padding: 0;
+            margin: 0;
+        }
+
+        #main{
+            /* width: 500px;
+            height: 200px; */
+            /* overflow: hidden; */
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 10px;
+            float: left;
+        }
+
+        #footer{
+            clear: both;
+        }
+
+        #footer h2{
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <div id="footer">
+        <h2>浮动后面的内容</h2>
+    </div>
+</body>
+</html>

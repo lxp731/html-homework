@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3选择器</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            float: left;
+            border: 1px solid #000;
+            margin: 8px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 150px;
+            transition: all .8s;
+        }
+
+        .clearfix::after{
+            content: "";
+            clear: both;
+            height: 0;
+            display: block;
+            visibility: hidden;
+            font-size: 0;
+        }
+
+        .box:nth-child(2):hover{
+            height: 30px;
+            line-height: 30px;
+            font-size: 10px;
+        }
+
+        .parent div:nth-child(3):hover{
+            border-radius: 50% 100%;
+        }
+
+        .box:nth-child(4):hover{
+            box-shadow: 5px 5px 10px #c00;
+        }
+
+        .box:nth-of-type(4){
+            font-size: 100px;
+            color: #f00;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .box:nth-of-type(5){
+            color: #fff;
+            background: linear-gradient(#000,#0f0,#fff);
+        }
+
+        /* +：相邻兄弟选择器 */
+        /* ~：后面的所有兄弟 */
+        .box:nth-of-type(5)+.box{
+            background: radial-gradient(#fff,#000);
+        }
+
+        .box:nth-of-type(7):hover{
+        transform: scale(.6); /* 缩放 天秤座 */
+        /* 放大，精确到每一个轴缩放 */
+        }
+
+        .box:nth-of-type(7)+div:hover{
+            transform: translate(-100px,-100px);/* 平移 */
+            /* 精确到每一个轴平移 */
+        }
+
+        .box:nth-last-of-type(4):hover{
+            transform: rotate(90deg);/* 旋转 */
+            /* 精确到每一个轴旋转 */
+        }
+
+        .box:nth-last-child(5):hover{
+            transform: skew(45deg);/* 倾斜 */
+            /* 精确到每一个轴倾斜 */
+        }
+
+        /* even：偶数；odd：奇数
+            before：伪元素，内部的最前面 */
+        .box:nth-child(even)::before{
+            content: "#";
+            color: rgba(241, 4, 222, 0.568);
+        }
+
+        /* after：伪元素，内部的最后面 */
+        .box:nth-child(3n)::after{
+            content: "*";
+            color: #f00;
+        }
+
+        /* 有class属性的HTML元素 */
+        [class]{
+            border-color: #c00;
+            border-width: 3px;
+        }
+
+        div[class*="box"]{
+            color: rgb(238, 15, 15);
+            text-shadow: 3px 3px 3px #000;
+        }
+
+        .box::first-letter{
+            color: #000;
+        }
+
+        div>ul>li{
+            color: #f00;
+        }
+
+        ul li{
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent clearfix">
+        <h2>CSS3选择器</h2>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <h2></h2>
+        <h2></h2>
+    </div>
+
+    <div>
+        <h2>浮动后面内容</h2>
+        <ul id="ul">
+            <li>这是一个列表1</li>
+            <li>这是一个列表1
+                <ul>
+                    <li>这是一个列表</li>
+                    <li>这是一个列表</li>
+                </ul>
+            </li>
+            <li>这是一个列表1</li>
+            <li>这是一个列表1</li>
+        </ul>
+    </div>
+</body>
+</html>

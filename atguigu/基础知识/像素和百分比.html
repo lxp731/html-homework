@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+            像素
+            不同设备显示可能不一样
+        */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+
+        /* 
+            百分比 相较于父元素属性的百分比
+            设置百分比可以使子元素跟随父元素的变化而变化
+        */
+        .box2{
+            width: 50%;
+            height: 50%;
+            background-color: green;
+        }
+
+        /* 
+            em是相对于字体的大小而设置的单位
+            1em = 1font-size
+            em 会根据字体的大小变化而变化
+            默认字体大小 font-size = 16
+            em 是根据自身的字体大小而变化的
+            rem 是相对于 根字体 的大小而变化的
+        */
+        .box3{
+            font-size: 16px;
+            width: 10em;
+            height: 10em;
+            background-color: yellowgreen;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+
+    <div class="box3"></div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻导航</title>
+    <style>
+        #div,h2,ul{
+            padding: 0;
+            margin: 0;
+        }
+
+        #div{
+            font-family: "宋体";
+            font-size: 16px;
+            width: 400px;
+            border: 1px solid #000;
+        }
+
+        #div h2{
+            background-color: rgb(240, 98, 3);
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            font-size: 16px;
+        }
+
+        .title{
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        .title a{
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            font-weight: 800;
+            margin-top: 5px;
+        }
+
+        .title a:hover{
+            color: #f00;
+            text-decoration: underline;
+        }
+
+        .list{
+            list-style: none;
+        }
+
+        .list a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .list a:hover{
+            color: #f00;
+            text-decoration: underline;
+        }
+
+        .list li{
+            background-image: url("../img/dot.gif");
+            background-repeat: no-repeat;
+            background-position: 0 8px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <h2>时事热点</h2>
+        <div class="title">
+            <a href="#">微博热搜</a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">微博时事热点</a>
+                <span>简单描述</span>
+            </li>
+            <li>
+                <a href="#">微博时事热点</a>
+                <span>简单描述</span>
+            </li>
+            <li>
+                <a href="#">微博时事热点</a>
+                <span>简单描述</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

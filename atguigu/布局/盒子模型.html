@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            /* 
+                内容区的大小由width 和 height 决定
+            */
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            
+            /* 
+            边框需要3个参数
+            边框的宽度
+            边框的颜色
+            边框的样式
+            */
+            /* border-width: 2px 4px 6px 8px;   上 右 下 左 */
+            /* border-width: 2px 4px 6px;   上 左右 下 */
+            /* border-width: 2px 4px;   上下 左右*/
+            /* border-xxx-width
+                    xxx = top / bottom / right / left */
+            border-width: 2px;
+
+
+            /* border-xxx-color
+                xxx = top / bottom / right / left */
+            border-color: red;
+
+
+            /* 
+                solid:实线
+                dotted:点状虚线
+                dashed:虚线
+                double:双线
+                border-xxx-style
+                    xxx = top / bottom / right / left
+            */
+            border-style: solid;
+
+            /* 
+                border-xxx-color
+                border-xxx-style
+            */
+
+
+            border: 10px orange dotted;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <!-- 
+        盒子模型（box  model）
+            -css 将页面所有的元素都设置为了矩形的盒子
+            -将不同的盒子放在指定的位置
+            -每一个盒子都由几个部分组成
+                内容区（content）
+                边框（border）
+                内边距（padding）
+                外边距（margin）
+
+     -->
+
+     <div class="box1"></div>
+</body>
+</html>
