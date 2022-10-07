@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cube</title>
+<style>
+.cube {
+    height: 230px;
+    width: 100px;
+    margin:100px;
+	position:relative;
+  
+}
+.side {
+    font-size: 18px;
+    font-weight: bold;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+    width: 100px;
+}
+.top {
+    background: #9acc55;
+    transform: rotate(-45deg) skew(15deg, 15deg);
+}
+.left {
+    background: #8ec63e;
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+.right {
+    background: #80b227;
+    transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+</style>
+</head>
+<body>
+<div class="cube">   
+        <div class="side top">红葡萄酒</div>
+        <div class="side left">白葡萄酒</div>
+        <div class="side right">玫瑰红酒</div>
+</div>
+</body>
+</html>

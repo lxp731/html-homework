@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform</title>
+    <style>
+.main{
+    width:1200px;
+}
+ .box {
+  width: 150px;
+  height: 150px;
+  background: #ddd;
+  box-shadow: 1px 1px 5px #ddd;
+  float:left;
+  margin:20px;
+}
+ .box .inner {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background:#c00;
+  transition: 0.5s;
+}
+
+.box:first-child:hover .inner {
+  transform: rotate(45deg);
+  /* 同rotateZ */
+}
+.box:nth-child(2):hover .inner {
+  transform: rotateX(45deg);
+  -webkit-transform: rotateX(45deg);
+}
+.box:nth-child(3):hover .inner {
+  transform: scaleY(0.4);
+}
+.box:nth-child(4):hover .inner {
+  transform: skewX(45deg);
+  /* 3d一定要加perspective */
+}
+.box:nth-child(5):hover .inner {
+  transform: rotateY(45deg);
+}
+.box:nth-child(6):hover .inner {
+  transform: matrix(0.6, 0.6, 0, 1.2, 45, 0);
+}
+.main:nth-child(1) .box{
+    perspective:100px;
+}
+.main:nth-child(2) .box{
+    perspective:300px;
+}
+/* perspective给执行3d动画的元素的父元素添加 */
+.main:nth-child(3) .inner {
+          transform-origin: 100% 0 0;
+}
+.main:nth-child(4) .inner { 
+          transform-origin: 0 100% 0;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="box">
+          <div class="inner"></div>
+        </div>
+        <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+          <div class="box">
+            <div class="inner"></div>
+          </div>
+    </div>
+
+<div class="main">
+    <div class="box">
+      <div class="inner"></div>
+    </div>
+    <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+</div>
+
+<div class="main">
+    <div class="box">
+      <div class="inner"></div>
+    </div>
+    <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+</div>
+
+<div class="main">
+    <div class="box">
+      <div class="inner"></div>
+    </div>
+    <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+      <div class="box">
+        <div class="inner"></div>
+      </div>
+</div>
+</body>
+</html>

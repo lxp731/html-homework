@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_a2</title>
+    <style>
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .list{
+            width: 605px;
+            line-height: 33px;
+            position: relative;
+        }
+
+        .list>li{
+            width: 150px;
+            height: 33px;
+            background-color: #ccc;
+            text-align: center;
+            float: left;
+            border-left: 1px solid #999;
+            border-bottom: 1px solid #999;
+        }
+
+        .list>li:nth-of-type(1){
+            border-left: 0;
+        }
+
+        .list>li:nth-of-type(3) ul{
+            position: absolute;
+            width: 605px;
+            height: 420px;
+            left: 0;
+            display: none;
+        }
+
+        .content li:nth-child(1){
+            width: 300px;
+            height: 200px;
+            background-color: #999;
+        }
+
+        .content li:nth-child(2){
+            width: 300px;
+            height: 200px;
+            margin-top: 1px;
+            background-color: #999;
+        }
+
+        .content li:nth-child(3){
+            width: 300px;
+            height: 400px;
+            float: right;
+            position: absolute;
+            top: 0;
+            right: 4px;
+            background-color: #999;
+        }
+
+        .content li a{
+            display: inline-block;
+            margin-top: 100px;
+        }
+
+        .content li:nth-child(3) a{
+            display: inline-block;
+            margin-top: 200px;
+        }
+
+        .list>li:hover{
+            border-top: 2px solid rgb(3, 39, 241);
+            background-color: #fff;
+        }
+
+        .list>li:nth-of-type(3):hover ul{
+            display: block;
+        }
+
+        .clearfix::after{
+            content: "";
+            clear: both;
+            height: 0;
+            display: block;
+            visibility: hidden;
+            font-size: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list clearfix">
+        <li>
+            <a href="#">咨询</a>
+        </li>
+        <li>
+            <a href="#">咨询</a>
+        </li>
+        <li>
+            <a href="#">咨询</a>
+            <ul class="content">
+                <li>
+                    <a href="#">周黎明</a>
+                </li>
+                <li>
+                    <a href="#">周黎明</a>
+                </li>
+                <li>
+                    <a href="#">周黎明</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">咨询</a>
+        </li>
+    </ul>
+</body>
+</html>

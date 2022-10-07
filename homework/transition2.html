@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition2</title>
+    <style>
+        #box{
+            overflow: hidden;
+        }
+
+        .list{
+           float: left;
+           width: 320px;
+           height: 220px;
+           margin: 20px;
+           border: 2px solid #999;
+           position: relative;
+           overflow: hidden; 
+        }
+
+        img{
+            display: inline-block; /* BFC */
+            width: 320px;
+            height: 220px;
+            transition: all 2s ease;
+        }
+
+        .list span{
+            position: absolute;/* BFC */
+            top: 10px;
+            right: 5px;
+            color: #ff9;
+            background-color: #f99;
+            text-align: center;
+            width: 20px;
+            height: 0;
+            padding-top: 30px;
+            overflow: hidden;
+            transition: all 2s ease;
+        }
+
+        .list span:hover{
+            height: 70px;
+        }
+
+        .list div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 180px;
+            background-color: rgba(31, 31, 31, 0.422);
+            transition: all 1s ease-in-out;
+        }
+
+        .list div h4{
+            padding: 0 25px;
+            line-height: 40px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+
+        .list div p{
+            padding: 0 25px;
+            margin: 0;
+            line-height: 20px;
+            font-size: 12px;
+            text-indent: 2em;
+            color: #fff;
+            height: 80px;
+        }
+
+        .list div:hover{
+            top: 0;
+        }
+
+        .list img:hover{
+            /*  透明度  */
+            opacity: .4;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="list">
+            <img src="../img/project9-9/1.jpg">
+            <span>小兔子</span>
+            <div>
+                <h4>这里是标题</h4>
+                <p>这里是文字的内容，是对图片的进一步解释。在本示例中，这些文字是隐藏的，只有鼠标在图片上的时候这些文字才能显示出来。</p>
+            </div>
+        </div>
+        <div class="list">
+            <img src="../img/project9-9/2.jpg">
+            <span>小兔子</span>
+            <div>
+                <h4>这里是标题</h4>
+                <p>这里是文字的内容，是对图片的进一步解释。在本示例中，这些文字是隐藏的，只有鼠标在图片上的时候这些文字才能显示出来。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
