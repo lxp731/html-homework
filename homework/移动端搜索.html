@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../inconfont1/iconfont.css">
+    <style>
+        #head{
+            width: 100%;
+            display: flex;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000;
+            display: inline-block;
+        }
+
+        #head .icon-zuojiantou{
+            display: inline-block;
+            font-size: 20px;
+            padding: 5px 10px;
+        }
+
+        #head form{
+            display: flex;
+            flex-grow: 1;
+        }
+
+        #head div{
+            flex-grow: 1;
+            display: flex;
+            background-color: #ddd;
+            border-radius: 8px;
+            padding: 3px 10px;
+            line-height: 20px;
+        }
+
+        #head .icon-sousuo{
+            display: inline-block;
+            font-size: 16px;
+            padding: 3px 3px;
+        }
+
+        #head form #search{
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            background-color: #ddd;
+        }
+
+        #head #sub{
+            font-size: 14px;
+            border: none;
+            width: 40px;
+            margin-left: 6px;
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="head">
+        <a href="#">
+            <span class="iconfont icon-zuojiantou"></span>
+        </a>
+
+        <form action="#">
+            <div>
+                <label for="search">
+                    <span class="iconfont icon-sousuo"></span>
+                </label>
+                <input type="text" name="search" id="search" placeholder="1111" required>
+            </div>
+            <input type="submit" value="搜索" id="sub">
+        </form>
+    </header>
+</body>
+</html>
