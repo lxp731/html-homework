@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 0;
+            margin: 0;
+            width: 160px;
+            height: 160px;
+            border: 1px solid chocolate;
+            margin: 8px;
+            font-size: 40px;
+            line-height: 150px;
+            text-align: center;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 != 0 && i % 7 != 7) {
+                log(i)
+            }
+            else {
+                log("");
+            }
+        }
+
+        function log(str) {
+            console.log(str);
+            document.write("<div>" + str + "</div>");
+        }
+    </script>
+</body>
+
+</html>
