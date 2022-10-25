@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        var s = 0;
+        
+        function sum(){
+            for (var i = 1; i <= 100; i ++) {
+                if(i % 2 == 0)
+                s += i;
+            }
+            return s;
+        }
+        
+        log(sum());
+
+        function log(str) {
+            console.log(str);
+            document.write("<h2>" + str + "</h2>");
+        }
+
+    </script>
+</body>
+
+</html>

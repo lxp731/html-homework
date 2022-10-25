@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var now = new Date().getHours();
+
+        function time1(now) {
+            var words;
+            if (time < 12) {
+                words = "早上好"
+            }
+            else if (time >= 12 && time < 18) {
+                words = "下午好";
+            }
+            else {
+                words = "晚上好";
+            }
+            return words;
+        }
+
+        log(now);
+        log(time1());
+
+        function log(str) {
+            console.log(str);
+            document.write("<div>" + str + "</div>");
+        }
+    </script>
+</body>
+
+</html>
