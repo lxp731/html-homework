@@ -1,0 +1,84 @@
+/* 顶部导航栏 */
+#main {
+    width: 288px;
+    height: 644px;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+#NorthBar {
+    height: 40px;
+    background-color: rgb(221, 184, 139);
+    border-bottom: 1px solid black;
+}
+
+.menu{
+    float: left;
+    margin-right: 15px;
+}
+
+.tital{
+    margin-top: 5px;
+    float: left;
+}
+
+.search{
+    padding-right: 5px;
+    float:right;
+}
+
+#NorthBar ol li div p:nth-child(1){
+    color: black;
+    font-size: 14px;
+}
+
+#NorthBar ol li div p:nth-child(2){
+    color: aliceblue;
+    font-size: 8px;
+}
+
+li img{
+    display: inline-block;
+    height: 25px;
+    line-height: 40px;
+    margin-top: 7px;
+}
+
+/* 底部导航栏 */
+
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+a p{
+    font-size: 8px;
+}
+
+#SouthBar{
+    width: 288px;
+    height: 45px;
+    border-top: 1px solid rgb(158, 150, 150);
+    background-color: rgb(240, 232, 232);
+    position: fixed;
+    top: 619px;
+}
+
+#nav li{
+    float: left;
+}
+#nav li:nth-child(1){
+    padding-left: 30px;
+}
+
+#nav li:nth-child(2){
+    padding-left: 75px;
+}
+
+#nav li:nth-child(3){
+    float: right;
+    padding-right: 30px;
+}
+
+/* 首页内容区 */
