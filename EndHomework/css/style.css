@@ -1,10 +1,11 @@
-/* 顶部导航栏 */
 #main {
     width: 288px;
     height: 644px;
     border: 1px solid black;
     margin: 20px auto;
 }
+
+/* 顶部导航栏 */
 
 #NorthBar {
     height: 40px;
