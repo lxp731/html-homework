@@ -5,18 +5,14 @@
     margin: 20px auto;
 }
 
-input{
-    width:60px;
+input {
+    width: 60px;
     height: 30px;
-    display: block;
 }
 
-#main table tr:nth-child(2){
-    margin-top: 100px;
-}
-
-#inp1{
+#inp1 {
     width: 270px;
     height: 50px;
-    text-align:right;
+    text-align: right;
 }
+
