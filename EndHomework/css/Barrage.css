@@ -1,0 +1,98 @@
+#main {
+    width: 288px;
+    height: 644px;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+
+/* 底部导航栏 */
+
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+a p {
+    font-size: 8px;
+}
+
+#SouthBar {
+    width: 288px;
+    height: 45px;
+    border-top: 1px solid rgb(158, 150, 150);
+    background-color: rgb(240, 232, 232);
+    position: fixed;
+    top: 619px;
+}
+
+#nav li {
+    float: left;
+}
+
+#nav li:nth-child(1) {
+    padding-left: 30px;
+}
+
+#nav li:nth-child(2) {
+    padding-left: 75px;
+}
+
+#nav li:nth-child(3) {
+    float: right;
+    padding-right: 30px;
+}
+
+.barrage-box {
+    width: 644px;
+    height: 288px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    position: absolute;
+    margin-top: 178px;
+    margin-left: -178px;
+    overflow: hidden;
+    animation: aniShake 0.5s linear infinite;
+}
+
+.text {
+    width: 100%;
+    font-size: 50px;
+    color: #FFF;
+    animation: aniMove 5s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+/* 文字滚动 */
+@keyframes aniMove {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 抖动字幕效果 */
+@keyframes aniShake {
+
+    0%,
+    33% {
+        text-shadow: 3px -3px 0px #FE008E, -5px 5px 0px #00FFFF;
+    }
+
+    34%,
+    66% {
+        text-shadow: 5px -5px 0px #FE008E, -3px 3px 0px #00FFFF;
+    }
+
+    67%,
+    100% {
+        text-shadow: 3px -3px 0px #00FFFF, -5px 5px 0px #FE008E;
+    }
+}
