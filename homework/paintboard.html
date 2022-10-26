@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>canvas</title>
   <style>
-    #imageFile, #downloadLink {
+    #imageFile,
+    #downloadLink {
       display: none;
     }
+
     #operations {
       padding: 10px 0;
     }
+
     .canvas-container {
       width: 805px;
       height: 805px;
@@ -23,31 +27,35 @@
     }
   </style>
 </head>
+
 <body>
   <div id="operations">
-    <input type="button" id="pencil" value="铅笔"/>
-    <input type="button" id="straightLine" value="直线"/>
-    <input type="button" id="rectangle" value="矩形"/>
-    <input type="button" id="solidRectangle" value="实心矩形"/>
-    <input type="button" id="circle" value="圆形"/>
-    <input type="button" id="solidCircle" value="实心圆形"/>
-    <input type="button" id="eraser" value="橡皮擦"/>
-    <input type="button" id="image" value="导入图片"/>
-    <input type="button" id="save" value="保存"/>
-    <input type="button" id="redo" value="重做"/>
-    <input type="button" id="undo" value="撤销"/>
-    <input type="button" id="clear" value="清除"/>
+    <input type="button" id="pencil" value="铅笔" />
+    <input type="button" id="straightLine" value="直线" />
+    <input type="button" id="rectangle" value="矩形" />
+    <input type="button" id="solidRectangle" value="实心矩形" />
+    <input type="button" id="circle" value="圆形" />
+    <input type="button" id="solidCircle" value="实心圆形" />
+    <input type="button" id="eraser" value="橡皮擦" />
+    <input type="button" id="image" value="导入图片" />
+    <input type="button" id="save" value="保存" />
+    <input type="button" id="redo" value="重做" />
+    <input type="button" id="undo" value="撤销" />
+    <input type="button" id="clear" value="清除" />
     <label>颜色：<input type="color" id="color" /></label>
-    <label>线条粗细：1<input type="range" id="lineWidth" min="1" max="100" value="1"/>100</label>
-    <input type="file" id="imageFile" name="image"/>
+    <label>线条粗细：1<input type="range" id="lineWidth" min="1" max="100" value="1" />100</label>
+    <input type="file" id="imageFile" name="image" />
     <a id="downloadLink"></a>
   </div>
+  
   <div class="canvas-container">
     <canvas id="canvas" width="800" height="800"></canvas>
   </div>
+
+
   <script>
     class Draw {
-      constructor (elements) {
+      constructor(elements) {
         const { canvas, color, lineWidth, operations, imageFile, downloadLink } = elements; // 控制画布的元素
         this.type = 'pencil'; // 类型初始化为铅笔
         this.canvas = canvas; // canvas元素
@@ -66,7 +74,7 @@
         this.historyUrls = []; // 存放每一步的base64 url（只取最新的十条）
         this.currentHistoryIndex = -1; // 当前历史记录的索引
       }
-      init () {
+      init() {
         let originX = null, originY = null; // 同于存放每次鼠标点击（mousedown）时的坐标
         const { offsetLeft, offsetTop } = this.canvas;
         this.clear(); // 给画布一个白色的背景
@@ -74,7 +82,7 @@
         this.operations.addEventListener('click', (event) => {
           const handleClick = this.handleOperations();
           const handleCurrentClick = handleClick[event.target.id]; // 根据按下的操作按钮，选择不同的处理事件
-          handleCurrentClick && handleCurrentClick(); 
+          handleCurrentClick && handleCurrentClick();
         }, false);
 
         this.canvas.addEventListener('mousedown', (event) => {
@@ -93,7 +101,7 @@
 
         // 当鼠标从画布上离开或者鼠标放开时，当前这步绘画结束
         this.canvas.addEventListener('mouseleave', () => { this.endOfDrawing(); }, false);
-        
+
         this.canvas.addEventListener('mouseup', () => { this.endOfDrawing(); }, false);
 
         this.canvas.addEventListener('mousemove', (event) => {
@@ -102,13 +110,13 @@
             const x = clientX - offsetLeft;
             const y = clientY - offsetTop;
             let newOriginX = originX, newOriginY = originY;
-            let distanceX = Math.abs(x-originX);
-            let distanceY = Math.abs(y-originY);
+            let distanceX = Math.abs(x - originX);
+            let distanceY = Math.abs(y - originY);
 
             // 让形状左上角的坐标永远大于右下角坐标，保证图形能正常绘制
             if (x < originX) newOriginX = x;
             if (y < originY) newOriginY = y;
-            
+
             // (x, y)为鼠标移动的过程中在画布上的坐标，(originX, originY)为鼠标点击时在画布上的坐标，
             //（newOriginX, newOriginY）为绘制形状（比如矩形）时形状左上角的坐标
             const mousePosition = { x, y, originX, originY, newOriginX, newOriginY, distanceX, distanceY };
@@ -119,13 +127,13 @@
         }, false);
       }
       // 在绘制形状的过程中需要重新绘制，否则会画出移动过程中的图像
-      reDraw () {
-        this.context.clearRect(0,0,this.canvasWidth,this.canvasHeight);
+      reDraw() {
+        this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         this.context.drawImage(this.image, 0, 0);
         this.context.beginPath();
       }
       // 绘画结束
-      endOfDrawing () {
+      endOfDrawing() {
         if (this.isDrawing) {
           this.context.closePath();
           this.isDrawing = false;
@@ -138,7 +146,7 @@
         this.context.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
       }
       // 添加历史记录
-      addHistory () {
+      addHistory() {
         let dataUrl = this.canvas.toDataURL('image/png');
         this.historyUrls.push(dataUrl);
         let length = this.historyUrls.length;
@@ -148,7 +156,7 @@
         this.currentHistoryIndex = this.historyUrls.length - 1;
       }
       // 点击操作按钮时触发的事件
-      handleOperations () {
+      handleOperations() {
         return {
           pencil: () => { this.type = 'pencil'; }, // 铅笔按钮绑定的事件
           straightLine: () => { this.type = 'straightLine'; }, // 直线按钮绑定的事件
@@ -181,7 +189,7 @@
           redo: () => { // 重做按钮绑定的事件
             let length = this.historyUrls.length;
             let currentIndex = this.currentHistoryIndex + 1;
-            if (currentIndex > length - 1 ) {
+            if (currentIndex > length - 1) {
               this.currentHistoryIndex = length - 1;
               return;
             };
@@ -193,7 +201,7 @@
           },
           undo: () => { // 撤回按钮绑定的事件
             let currentIndex = this.currentHistoryIndex - 1;
-            if (currentIndex < 0) { 
+            if (currentIndex < 0) {
               currentIndex === -1 && this.clear();
               this.currentHistoryIndex = -1;
               return;
@@ -207,7 +215,7 @@
         }
       }
       // 不同类型的操作绑定在mousemove上的事件
-      handleMousemove () {
+      handleMousemove() {
         return {
           pencil: (mousePosition) => {
             const { x, y } = mousePosition;
@@ -224,7 +232,7 @@
           },
           straightLine: (mousePosition) => {
             let { x, y, originX, originY } = mousePosition;
-            this.reDraw();       
+            this.reDraw();
 
             this.context.moveTo(originX, originY);
             this.context.lineTo(x, y);
@@ -233,7 +241,7 @@
             this.context.closePath();
           },
           rectangle: (mousePosition) => {
-            let {newOriginX, newOriginY, distanceX, distanceY  } = mousePosition;
+            let { newOriginX, newOriginY, distanceX, distanceY } = mousePosition;
             this.reDraw();
             this.context.rect(newOriginX, newOriginY, distanceX, distanceY);
             this.context.stroke();
@@ -251,17 +259,17 @@
             this.reDraw();
 
             let r = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-            this.context.arc(distanceX + newOriginX, distanceY + newOriginY , r, 0, 2 * Math.PI);
+            this.context.arc(distanceX + newOriginX, distanceY + newOriginY, r, 0, 2 * Math.PI);
             this.context.stroke();
 
             this.context.closePath();
           },
           solidCircle: (mousePosition) => {
             let { newOriginX, newOriginY, distanceX, distanceY } = mousePosition;
-            this.reDraw();       
+            this.reDraw();
 
             let r = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-            this.context.arc(distanceX + newOriginX, distanceX + newOriginY , r, 0, 2 * Math.PI);
+            this.context.arc(distanceX + newOriginX, distanceX + newOriginY, r, 0, 2 * Math.PI);
             this.context.fillStyle = this.color.value;
             this.context.fill();
 
@@ -296,4 +304,5 @@
     };
   </script>
 </body>
+
 </html>
