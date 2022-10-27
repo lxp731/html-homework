@@ -86,20 +86,3 @@ a p{
     background-color: rgba(189, 212, 212, .8);
     border-radius: 50%;
 }
-
-/* 首页内容区 */
-#content ul li{
-    width: 50%;
-    float: left;
-    margin-top: 10px;
-}
-
-#content ul li a{
-    display: block;
-    width: 100px;
-    height: 20px;
-    border: 1px solid gray;
-    text-align: center;
-    line-height: 20px;
-    margin-left: 20px;
-}
