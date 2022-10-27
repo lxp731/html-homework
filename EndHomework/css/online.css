@@ -3,6 +3,7 @@
     height: 644px;
     border: 1px solid black;
     margin: 20px auto;
+    overflow: hidden;
 }
 
 /* 顶部导航栏 */
@@ -86,3 +87,29 @@ a p{
     background-color: rgba(189, 212, 212, .8);
     border-radius: 50%;
 }
+
+
+/* 内容区 */
+#content ul li div{
+    width: 288px;
+    font-weight: 550;
+    margin-bottom: 20px;
+} 
+
+#content ul li div:nth-child(1){
+    margin-top: 5px;
+}
+
+#content ul li div p{
+    font-size: 8px;
+    font-weight: 50;
+    margin-top: 2px;
+}
+
+#content ul li div img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+} 
