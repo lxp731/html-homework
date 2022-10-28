@@ -1,0 +1,54 @@
+#main {
+    width: 288px;
+    height: 644px;
+    border: 1px solid black;
+    margin: 20px auto;
+    background-color: #000;
+}
+
+/* 底部导航栏 */
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+a p{
+    font-size: 8px;
+}
+
+#SouthBar{
+    width: 288px;
+    height: 45px;
+    border-top: 1px solid rgb(158, 150, 150);
+    background-color: rgb(240, 232, 232);
+    position: fixed;
+    top: 619px;
+}
+
+#nav li{
+    float: left;
+}
+#nav li:nth-child(1){
+    padding-left: 30px;
+}
+
+#nav li:nth-child(2){
+    padding-left: 75px;
+}
+
+#nav li:nth-child(3){
+    float: right;
+    padding-right: 30px;
+}
+
+#nav li a img:hover{
+    background-color: rgba(189, 212, 212, .8);
+    border-radius: 50%;
+}
+
+/* 内容区 */
+#content{
+    text-align: center;
+    margin: 50% auto;
+}
