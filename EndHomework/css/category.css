@@ -13,32 +13,32 @@
     border-bottom: 1px solid black;
 }
 
-.menu{
+.menu {
     float: left;
     margin-right: 15px;
 }
 
-.tital{
+.tital {
     margin-top: 5px;
     float: left;
 }
 
-.search{
+.search {
     padding-right: 5px;
-    float:right;
+    float: right;
 }
 
-#NorthBar ol li div p:nth-child(1){
+#NorthBar ol li div p:nth-child(1) {
     color: black;
     font-size: 14px;
 }
 
-#NorthBar ol li div p:nth-child(2){
+#NorthBar ol li div p:nth-child(2) {
     color: aliceblue;
     font-size: 8px;
 }
 
-li img{
+li img {
     display: inline-block;
     height: 25px;
     line-height: 40px;
@@ -53,11 +53,11 @@ a {
     display: block;
 }
 
-a p{
+a p {
     font-size: 8px;
 }
 
-#SouthBar{
+#SouthBar {
     width: 288px;
     height: 45px;
     border-top: 1px solid rgb(158, 150, 150);
@@ -66,23 +66,56 @@ a p{
     top: 619px;
 }
 
-#nav li{
+#nav li {
     float: left;
 }
-#nav li:nth-child(1){
+
+#nav li:nth-child(1) {
     padding-left: 30px;
 }
 
-#nav li:nth-child(2){
+#nav li:nth-child(2) {
     padding-left: 75px;
 }
 
-#nav li:nth-child(3){
+#nav li:nth-child(3) {
     float: right;
     padding-right: 30px;
 }
 
-#nav li a img:hover{
+#nav li a img:hover {
     background-color: rgba(189, 212, 212, .8);
     border-radius: 50%;
 }
+
+.vip {
+    background-color: rgb(207, 200, 200);
+}
+
+/* .vip img:nth-child(2){
+    position: relative;
+} */
+
+#content div {
+    width: auto;
+    height: 40px;
+}
+
+#content div img {
+    width: auto;
+    height: 30px;
+}
+
+#content div span {
+    line-height: 30px;
+}
+
+.common div ul li{
+    display: inline-block;
+    margin-bottom: 10px;
+    width: auto;
+    height: 20px;
+    background-color: rgb(214, 219, 213);
+    border-radius: 90%;
+}
+
