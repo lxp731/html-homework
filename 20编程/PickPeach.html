@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        function pick(...args) {
+            let arr = args;
+            let count = 0;
+            let height = arr.pop() + 30;
+            let res = arr[0].split(' ').map(item => parseInt(item));
+            for (let i = 0; i < res.length; i++) {
+                if (res[i] <= height) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log(pick('100 200 150 140 129 134 167 198 200 111', 110));
+    </script>
+</body>
+
+</html>

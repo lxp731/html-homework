@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <p align="center">
+        请输入一个生日：月/日：
+        <input type="text" id="t1">
+        <input type="button" value="显示星座" onclick="show()" />
+    </p>
+    <script>
+        function show() {
+            var c1 = document.getElementById("t1").value;
+            var month = c1.substring(0, 2);
+            var day = parseInt(c1.substring(2));
+            if (month == 01 && month == 02 && month == 03 && month == 04 && month == 05 && month == 06 && month == 07 && month == 08 && month == 09 && month == 10 && month == 11 && month == 12)
+                switch (month) {
+                    case "01":
+                        if (day > 19 || day <= 31) { alert("水瓶座") }
+                        else if (day <= 19) { alert("摩羯座") }
+                        else alert("雅典娜");
+                        break;
+                    case "02":
+                        if (day > 18 || day <= 29) { alert("双鱼座") }
+                        else if (day <= 18) { alert("水瓶座") }
+                        else alert("雅典娜");
+                        break;
+                    case "03":
+                        if (day > 20 || day <= 31) { alert("白羊座") }
+                        else if (day <= 20) { alert("双鱼座") }
+                        else alert("雅典娜");
+                        break;
+                    case "04":
+                        if (day > 19 || day <= 30) { alert("金牛座") }
+                        else if (day <= 19) { alert("白羊座") }
+                        else alert("雅典娜");
+                        break;
+                    case "05":
+                        if (day > 20 || day <= 31) { alert("双子座") }
+                        else if (day <= 20) { alert("金牛座") }
+                        else alert("雅典娜");
+                        break;
+                    case "06":
+                        if (day > 21 || day <= 30) { alert("巨蟹座") }
+                        else if (day <= 21) { alert("双子座") }
+                        else alert("雅典娜");
+                        break;
+                    case "07":
+                        if (day > 22 || day <= 31) { alert("狮子座") }
+                        else if (day <= 22) { alert("巨蟹座") }
+                        else alert("雅典娜");
+                        break;
+                    case "08":
+                        if (day > 22 || day <= 31) { alert("处女座") }
+                        else if (day <= 22) { alert("狮子座") }
+                        else alert("雅典娜");
+                        break;
+                    case "09":
+                        if (day > 22 || day <= 30) { alert("天秤座") }
+                        else if (day <= 22) { alert("处女座") }
+                        else alert("雅典娜");
+                        break;
+                    case "10":
+                        if (day > 23 || day <= 31) { alert("天蝎座") }
+                        else if (day <= 23) { alert("天秤座") }
+                        else alert("雅典娜");
+                        break;
+                    case "11":
+                        if (day > 20 || day <= 30) { alert("射手座") }
+                        else if (day <= 20) { alert("天蝎座") }
+                        else alert("雅典娜");
+                        break;
+                    case "12":
+                        if (day > 21 || day <= 31) { alert("摩羯座") }
+                        else if (day <= 21) { alert("射手座") }
+                        else alert("雅典娜");
+                        break;
+                }
+            else alert("雅典娜")
+        }
+    </script>
+</body>
+
+</html>

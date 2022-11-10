@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        var x = 1234567890;
+        var digit;
+        var ret = 0;
+        var count = [];
+        while (x > 0) {
+            digit = x % 10;
+            count.push(digit);
+            //ret=ret*10+digit;
+            x = parseInt(x / 10);
+        }
+        console.log(count.join(""));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        function cacl(arr, callback) {
+            var ret;
+            for (var i = 0; i < arr.length; i++) {
+                ret = callback(arr[i], ret);
+            }
+            return ret;
+        }
+        Array.prototype.max = function () {
+            return cacl(this, function (item, max) {
+                if (!(max > item)) {
+                    return item;
+                }
+                else {
+                    return max;
+                }
+            });
+        };
+        Array.prototype.min = function () {
+            return cacl(this, function (item, min) {
+                if (!(min < item)) {
+                    return item;
+                }
+                else {
+                    return min;
+                }
+            });
+        };
+        Array.prototype.sum = function () {
+            return cacl(this, function (item, sum) {
+                if (typeof (sum) == 'undefined') {
+                    return item;
+                }
+                else {
+                    return sum += item;
+                }
+            });
+        };
+        Array.prototype.avg = function () {
+            if (this.length == 0) {
+                return 0;
+            }
+            return this.sum(this) / this.length;
+        };
+        var theArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(theArray.max());
+        console.log(theArray.min());
+        console.log(theArray.avg());
+    </script>
+</body>
+
+</html>

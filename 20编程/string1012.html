@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+
+    <script>
+        function print(num, ...args) {
+            let arr = [...args];
+            let res = '';
+            for (let i = 0; i < arr.length; i++) {
+                if (i < num) {
+                    res = res + arr[i] + '\n\n'
+                }
+                else {
+                    let ans = arr[i].split(' ');
+                    for (let j = 0; j < ans.length; j++) {
+                        res = res + ans[j] + '\n\n';
+                    }
+                }
+            }
+            return res;
+        }
+        console.log(print(3, 'abcd e', 'A C M', 'N U P Ter', 'A B D'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        function Bavg(...args) {
+            let arr = args;
+            arr.shift();
+            let map = new Map();
+            for (let i = 0; i < arr.length; i++) {
+                let j = 0;
+                arr[i] = arr[i].split(' ').splice(2, 2);
+                map.set(arr[i][0], (map.get(arr[i][0]) || 0) + ' ' + arr[i][1])
+            }
+            let obj = {};
+            for (let item of map.entries()) {
+                obj[item[0]] = item[1].split(' ').splice(1);
+            }
+            for (let i in obj) {
+                let sum = 0;
+                let len = obj[i].length;
+                for (let j = 0; j < obj[i].length; j++) {
+                    obj[i][j] = parseInt(obj[i][j]);
+                    sum += obj[i][j];
+                }
+                obj[i] = (sum / len).toFixed('2');
+            }
+            let tempObj = {};
+            for (let i in obj) {
+                tempObj[obj[i]] = i;
+            }
+            let outputObj = {};
+            let keyVal = Object.keys(tempObj);
+            keyVal.sort();
+            for (let i = 0; i < keyVal.length; i++) {
+                outputObj[keyVal[i]] = tempObj[keyVal[i]];
+            }
+            let res = '';
+            for (let item in outputObj) {
+                res = res + outputObj[item] + ' ' + item + '\n';
+            }
+            return res;
+        }
+        console.log(Bavg('5', 'S2 线性代数 高等教育出版社 24', 'J1 数据库 东软电子出版社 40', 'S1 高等数学 高等教育出版社 38', 'S3 离散数学 机械工业出版社 30', 'J2 操作系统 东软电子出版社 46'));
+    </script>
+</body>
+
+</html>

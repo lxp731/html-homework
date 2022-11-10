@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        function avg(...args) {
+            let arr = args;
+            let res = [];
+            let ans = '';
+            for (let i = 1; i < arr.length; i = i + 2) {
+                res.push(arr[i]);
+            }
+            for (let i = 0; i < res.length; i++) {
+                let sum = 0;
+                res[i] = res[i].split(' ').map(i => parseInt(i)).sort((a, b) => b - a);
+                for (let j = 0; j < res[i].length; j++) {
+                    sum += res[i][j];
+                }
+                res[i].unshift(sum / res[i].length);
+            }
+            for (let i = 0; i < res.length; i++) {
+                for (let j = 0; j < res[i].length; j++) {
+                    res[i][j] = res[i][j].toFixed('2');
+                }
+                ans += res[i].join(' ') + '\n';
+            }
+            return ans;
+        }
+        console.log(avg('3', '1 2 3', '4', '1 2 3 4', '0'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18001030108-刘晓鹏</title>
+</head>
+
+<body>
+    <script>
+        var str = "!@#$%^QWERT    1234567";
+        // var arr=arr2=arr3=[];
+        var arr = [];
+        var reg = /\d/g;
+        var reg2 = /[a-zA-Z]/g;
+        var reg3 = /\s/g;
+        function check(x, y) {
+            var z = 0;
+            do {
+                var x = y.exec(str)
+                if (x != null) {
+                    z++;
+                }
+            }
+            while (x != null)
+            return z;
+        }
+        var num = check(arr, reg);
+        console.log(`数字${num}个`);
+        var a = check(arr, reg2);
+        console.log(`字母${a}个`);
+        var b = check(arr, reg3)
+        console.log(`空格${b}个`);
+        console.log(`其他字符${str.length - a - num - b}个`);
+    </script>
+</body>
+
+</html>
