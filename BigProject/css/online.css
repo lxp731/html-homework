@@ -1,0 +1,56 @@
+/* 美化滚动条 */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(#101F1C, 0.1);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(144, 147, 153, .5);
+    background-clip: padding-box;
+    min-height: 28px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(144, 147, 153, .3);
+}
+
+/* 内容区 */
+#content ul li div {
+    width: 288px;
+    font-weight: 550;
+    margin-bottom: 40px;
+}
+
+#content ul li div:nth-child(1) {
+    margin-top: 5px;
+}
+
+#content ul li div p {
+    font-size: 8px;
+    font-weight: 50;
+    margin-top: 2px;
+}
+
+#content ul li div img {
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+span{
+    color: black;
+}

@@ -1,0 +1,53 @@
+/* 底部导航栏 */
+a {
+    text-decoration: none;
+    color: #999;
+    display: block;
+}
+
+#nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    background-color: #fff;
+}
+
+#nav li {
+    width: 20%;
+    text-align: center;
+}
+
+#nav>li:nth-child(3) img {
+    width: auto;
+    height: 35px;
+}
+
+#nav li span {
+    font-size: 24px;
+    line-height: 30px;
+    display: block;
+}
+
+/* 顶部导航栏 */
+#NorthBar {
+    height: 40px;
+    background-color: rgb(221, 184, 139);
+    border-bottom: 1px solid black;
+}
+
+.menu {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+.search {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    float: right;
+}

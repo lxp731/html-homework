@@ -13,8 +13,7 @@
     <title>18001030108-刘晓鹏</title>
 
     <style>
-
-        .list{
+        .list {
 
             display: flex;
 
@@ -24,7 +23,7 @@
 
 
 
-        .list>li{
+        .list>li {
 
             list-style: none;
 
@@ -48,9 +47,9 @@
 
 
 
-        .list>.clicked{
+        .list>.clicked {
 
-            background: linear-gradient(#000,#fff);
+            background: linear-gradient(#000, #fff);
 
             color: #fff;
 
@@ -60,12 +59,11 @@
 
 
 
-        .dom>h2{
+        .dom>h2 {
 
             background-color: #f00;
 
         }
-
     </style>
 
 </head>
@@ -134,37 +132,37 @@
 
         var li = ul.querySelectorAll("li");
 
-        
+
 
         //  console.log(dom,btn,h2,ul,li);
 
-        btn[0].onclick = function(){
+        btn[0].onclick = function () {
 
-            if(h2.innerText == "JS DOM"){
+            if (h2.innerText == "JS DOM") {
 
-               h2.innerText = "HTML内容";
+                h2.innerText = "HTML内容";
 
-               //JS里面，css里用连接符连接的属性名用驼峰式写法
+                //JS里面，css里用连接符连接的属性名用驼峰式写法
 
-               h2.style.backgroundColor = "#fff";       
+                h2.style.backgroundColor = "#fff";
 
             }
 
-            else{
+            else {
 
                 h2.innerText == "JS DOM";
 
-                h2.style.backgroundColor = "#f00";   
+                h2.style.backgroundColor = "#f00";
 
             }
 
         }
 
-        
 
 
 
-        btn[1].onclick =function(){
+
+        btn[1].onclick = function () {
 
             h2.innerHTML = li[0].nodeName + li[0].nodeType + li[0].nodeValue
 
@@ -176,11 +174,11 @@
 
 
 
-        btn[2].onclick =function(){
+        btn[2].onclick = function () {
 
-            for(var i= 0;i<li.length;i++){
+            for (var i = 0; i < li.length; i++) {
 
-                li[i].onclick = function(){
+                li[i].onclick = function () {
 
                     //内部不能使用下标i，使用this，this表示正在点击的li
 
@@ -206,7 +204,7 @@
 
 
 
-        btn[3].onclick =function(){
+        btn[3].onclick = function () {
 
             var nli = document.createElement("li");/* 创建元素 */
 
@@ -216,13 +214,13 @@
 
 
 
-            var arr =dom.querySelectorAll("li");
+            var arr = dom.querySelectorAll("li");
 
 
 
-            for(var i=0;i<arr.length;i++){
+            for (var i = 0; i < arr.length; i++) {
 
-                arr[i].ondblclick = function(){
+                arr[i].ondblclick = function () {
 
                     this.parentNode.removeChild(this);
 
@@ -230,45 +228,45 @@
 
             }
 
-            for(var i = 0; i < arr.length; i ++){
+            for (var i = 0; i < arr.length; i++) {
 
-                arr[i].onclick = function(){
+                arr[i].onclick = function () {
 
-                    this.classList.toggle("clicked");
+                    this.classList.toggle("clicked");
 
-                    this.nextElementSibling.classList.toggle("clicked");
+                    this.nextElementSibling.classList.toggle("clicked");
 
-                    this.previousElementSibling.classList.toggle("clicked");
-
-                }
-
-            }
-
-        }
-
-
-
-        btn[4].onclick =function(){
-
-            var arr =dom.querySelectorAll("li");
-
-            for(var i=0;i<arr.length;i++){
-
-                arr[i].ondblclick = function(){
-
-                this.parentNode.removeChild(this);
+                    this.previousElementSibling.classList.toggle("clicked");
 
                 }
 
-            } 
+            }
 
         }
 
-//第五个为拓展
 
-        
 
-        btn[5].onclick= function(){
+        btn[4].onclick = function () {
+
+            var arr = dom.querySelectorAll("li");
+
+            for (var i = 0; i < arr.length; i++) {
+
+                arr[i].ondblclick = function () {
+
+                    this.parentNode.removeChild(this);
+
+                }
+
+            }
+
+        }
+
+        //第五个为拓展
+
+
+
+        btn[5].onclick = function () {
 
             //cloneNode：克隆节点们，参数为true表示同时克隆子节点
 
@@ -278,13 +276,13 @@
 
 
 
-        
 
-        btn[6].onclick = function(){
 
-            var arr= dom.querySelectorAll("li");
+        btn[6].onclick = function () {
 
-            arr[arr.length-1].parentNode.removeChild(arr[arr.length-1]);
+            var arr = dom.querySelectorAll("li");
+
+            arr[arr.length - 1].parentNode.removeChild(arr[arr.length - 1]);
 
 
 
@@ -292,21 +290,21 @@
 
 
 
-        btn[7].onclick = function(){
+        btn[7].onclick = function () {
 
-            var arr =dom.querySelectorAll("li");
+            var arr = dom.querySelectorAll("li");
 
-            for(var i=0;i<arr.length;i++){
+            for (var i = 0; i < arr.length; i++) {
 
                 let J = arr[i].innerText;
 
-                arr[i].onmouseover = function(){
+                arr[i].onmouseover = function () {
 
                     this.innerText = "Text";
 
                 }
 
-                arr[i].onmouseout =function(){
+                arr[i].onmouseout = function () {
 
                     this.innerText = J;
 
