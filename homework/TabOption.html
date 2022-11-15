@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>18001030108-刘晓鹏</title>
+    <style type="text/css">
+        .title {
+            width: 500px;
+            height: 50px;
+            color: black;
+            border: 1px solid gray;
+            margin: 0;
+            display: flex;
+        }
+
+        .title span {
+            width: 80px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            font-family: "微软雅黑";
+            font-size: 24px;
+            flex: 1;
+            border-right: 1px solid black;
+        }
+
+        .title span:nth-child(3) {
+            border-right: none;
+        }
+
+        .tab {
+            color: red;
+            background-color: #999;
+            cursor: pointer;
+        }
+
+        #tab>div {
+            width: 500px;
+            height: 200px;
+            border: 1px solid gray;
+            display: none;
+            text-align: center;
+            line-height: 200px;
+            font-family: "微软雅黑";
+            font-size: 24px;
+        }
+
+        #tab .content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tab">
+        <h2 class="title">
+            <span class="tab" onmouseover="changeTab(this)">选项一</span>
+            <span onmouseover="changeTab(this)">选项二</span>
+            <span onmouseover="changeTab(this)">选项三</span>
+        </h2>
+        <div class="content" style="background: greenyellow;">内容一</div>
+        <div style="background: cyan;">内容二</div>
+        <div style="background: goldenrod;">内容三</div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // 获取所有的span标签组
+    var tabs = document.getElementById("tab").getElementsByTagName("span");
+    // 获取所有的div标签组
+    var cts = document.getElementById("tab").getElementsByTagName("div");
+
+    function changeTab(current) {
+        for (i = 0; i < tabs.length; i++) {
+            if (tabs[i] == current) {
+                tabs[i].className = "tab";
+                cts[i].className = "content";
+            } else {
+                tabs[i].className = "";
+                cts[i].className = "";
+            }
+        }
+    }
+</script>

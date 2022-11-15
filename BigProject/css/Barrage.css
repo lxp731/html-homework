@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+}
+
+.barrage-box {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: aniShake 0.5s linear infinite;
+    position: absolute;
+    /* transform: rotate(90deg); */
+}
+
+.text {
+    width: 100%;
+    font-size: 50px;
+    color: #FFF;
+    animation: aniMove 5s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+/* 文字滚动 */
+@keyframes aniMove {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 抖动字幕效果 */
+@keyframes aniShake {
+
+    0%,
+    33% {
+        text-shadow: 3px -3px 0px #FE008E, -5px 5px 0px #00FFFF;
+    }
+
+    34%,
+    66% {
+        text-shadow: 5px -5px 0px #FE008E, -3px 3px 0px #00FFFF;
+    }
+
+    67%,
+    100% {
+        text-shadow: 3px -3px 0px #00FFFF, -5px 5px 0px #FE008E;
+    }
+}
