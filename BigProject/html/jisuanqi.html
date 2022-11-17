@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/jisuanqi.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="content">
+            <table>
+                <!--显示结果行-->
+                <tr>
+                    <td colspan="4"><input id="inp1" type="text" value="" name="xianshi" /></td>
+                </tr>
+    
+                <!--第一行 清除按钮-->
+                <tr>
+                    <td><input type="button" value="Clear" onclick="inputPCB(this)" /></td>
+                </tr>
+    
+                <!--第二行-->
+                <tr>
+                    <td><input type="button" value="1" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="2" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="3" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="4" onclick="inputEvent(this)" /></td>
+                </tr>
+                <!--第三行-->
+                <tr>
+                    <td><input type="button" value="5" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="6" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="7" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="8" onclick="inputEvent(this)" /></td>
+                </tr>
+                <!--第四行-->
+                <tr>
+                    <td><input type="button" value="9" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="0" onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="." onclick="inputEvent(this)" /></td>
+                    <td><input type="button" value="=" onclick="inputEquel(this)" /></td>
+                </tr>
+                <!--第五行-->
+                <tr>
+                    <td><input type="button" value="+" onclick="inputOper(this)" /></td>
+                    <td><input type="button" value="-" onclick="inputOper(this)" /></td>
+                    <td><input type="button" value="*" onclick="inputOper(this)" /></td>
+                    <td><input type="button" value="/" onclick="inputOper(this)" /></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="SouthBar">
+            <ul id="nav">
+                <li>
+                    <a href="./main.html">
+                        <img src="../resouce/main.svg" alt="">
+                        <p>主页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resouce/friends.svg" alt="">
+                        <p>圈子</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resouce/plusign.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="./online.html">
+                        <img src="../resouce/message.svg" alt="">
+                        <p>在线</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resouce/mine.svg" alt="">
+                        <p>我的</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+
+        /* 定义一个Calculator类*/
+        function Calculator() {
+
+            // 传参数传进去三个分别是数字一、数字二和操作符（oper），res是存储结果的参数
+            this.jisuan = function (num1, num2, oper) {
+                var res = 0;
+                switch (oper) {
+                    case "+":
+                        res = num1 + num2;
+                        break;
+                    case "-":
+                        res = num1 - num2;
+                        break;
+                    case "*":
+                        res = num1 * num2;
+                        break;
+                    case "/":
+                        res = num1 / num2;
+                        break;
+                }
+                return res;
+            }
+        }
+        //创建对象
+        var calculator = new Calculator();
+
+        /*定义全局变量*/
+        var val = 0; //放置输入的值
+        var xval = 0;//保存转换Number类型的值
+        var temp = 0; //保存第一次输入的值   
+        var oper = "";//保存输入的操作符
+
+        /*获取输入数字*/
+        function inputEvent(e) {
+
+            val = e.value
+            var xsval = document.getElementById("inp1");
+            xsval.value += val; //连续输入数字(String类型)
+            //转换Number类型
+            xval = parseFloat(xsval.value);
+
+        }
+
+        /*获取第一行的数据*/
+        function inputPCB(e) {
+            //window.alert(e.value);
+            var xsval = document.getElementById("inp1");
+            if (e.value == "Clear") {
+                xsval.value = "";
+            }
+        }
+
+        /*输入操作符*/
+        function inputOper(e) {
+
+            oper = e.value;
+            //window.alert(typeof oper);
+            //oper=oper.substr(0);
+            if (e.value == "+") {
+                var xsval = document.getElementById("inp1");
+                //保存上次计算结果，并对字符串进行转换Number类型
+                temp = parseFloat(xsval.value);
+                //第一次输入的值设置为空
+                xsval.value = "";
+            } else if (e.value == "-") {
+                var xsval = document.getElementById("inp1");
+                temp = parseFloat(xsval.value);
+                xsval.value = "";
+            } else if (e.value == "*") {
+                var xsval = document.getElementById("inp1");
+                temp = parseFloat(xsval.value);
+                xsval.value = "";
+            } else if (e.value == "/") {
+                var xsval = document.getElementById("inp1");
+                temp = parseFloat(xsval.value);
+                xsval.value = "";
+            }
+        }
+
+        /*计算结果*/
+        function inputEquel(e) {
+
+            var xsval = document.getElementById("inp1");
+            if (e.value == "=") {
+                //window.alert(xval);
+                //调用对象方法
+                xsval.value = calculator.jisuan(temp, xval, oper);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+/* 底部导航栏 */
 a {
     text-decoration: none;
     color: black;
@@ -30,6 +31,7 @@ a {
     display: block;
 }
 
+/* 顶部导航栏 */
 #NorthBar {
     height: 40px;
     background-color: rgb(221, 184, 139);
@@ -52,14 +54,13 @@ a {
 
 /* 首页内容区 */
 #content {
-    width: 100%;
-    padding: auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #content ul li {
     width: 50%;
     float: left;
-    /* padding: 0 10%; */
     margin: 10px auto;
 }
 

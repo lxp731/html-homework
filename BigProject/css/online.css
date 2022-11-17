@@ -51,6 +51,10 @@
     margin-right: 5px;
 }
 
+#content ul li div {
+    margin-left: 20px;
+}
+
 span{
     color: black;
 }
