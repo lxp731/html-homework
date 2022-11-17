@@ -55,6 +55,25 @@
     margin-left: 20px;
 }
 
-span{
+span {
     color: black;
+}
+
+span:hover {
+    color: rgb(4, 98, 112);
+}
+
+.gotop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    line-height: 100px;
+}
+
+.gotop img {
+    width: 50px;
+}
+
+.gotop img:hover {
+    width: 48px;
 }

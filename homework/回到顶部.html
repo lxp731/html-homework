@@ -7,26 +7,56 @@
     <title>回到顶部</title>
     <style>
         .content{
-            width: 100px;
+            width: 100%;
             height: 2000px;
-            background:linear-gradient(#000,#0f0,#f00);
-            color: whitesmoke;
+            background: linear-gradient(#000,#0f0,#fff);
+            color: #fff;
             font-size: 100px;
         }
-        .gotop{
+
+        .goBack{
             position: fixed;
             bottom: 0;
             left: 0;
-            
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            background-size: 38px 38px;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="content">内容</div>
+        <div class="content">主体内容</div>
     </nav>
-    <div class="gotop">
-        回到顶部
+    <div class="goBack">
+        对到顶部
     </div>
+
+    <script>
+        var nav = document.querySelector("#content");
+        var goBack = document.querySelector(".goBack");
+
+        window.addEventListener("scroll",function(){
+            // pageXOffset：设置或返回当前页面相对于窗口显示区左上角的 X 位置。
+            // pageYOffset：设置或返回当前页面相对于窗口显示区左上角的 Y 位置。
+            // pageXOffset 和 pageYOffset 属性相等于 scrollX 和 scrollY 属性。
+            if(window.pageYOffset >= nav.offsetTop + 300){
+                goBack.style.display = "block";
+            }
+            else{
+                goBack.style.display = "none";
+            }
+
+            goBack.addEventListener("click", function(){
+                window.scroll(0,0);
+            })
+        })  
+    </script>
 </body>
 </html>

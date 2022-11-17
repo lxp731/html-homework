@@ -1,7 +1,7 @@
 /* 底部导航栏 */
 a {
     text-decoration: none;
-    color: #999;
+    color: black;
     display: block;
 }
 
@@ -50,4 +50,12 @@ a {
     top: 8px;
     right: 8px;
     float: right;
+}
+
+#nav li:hover{
+    background-color: rgb(73, 167, 167);
+}
+
+#nav li a:hover {
+    color: tomato;
 }
