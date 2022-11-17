@@ -53,9 +53,5 @@ a {
 }
 
 #nav li:hover{
-    background-color: rgb(73, 167, 167);
-}
-
-#nav li a:hover {
-    color: tomato;
+    background-color: rgb(255,103,0);
 }

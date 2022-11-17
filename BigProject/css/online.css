@@ -27,6 +27,10 @@
 }
 
 /* 内容区 */
+#content {
+    background-color: #fff;
+}
+
 #content ul li div {
     width: 288px;
     font-weight: 550;
