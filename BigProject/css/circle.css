@@ -1,33 +1,19 @@
-body{
-    margin: 0;
-}
-ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-a{
-    text-decoration: none;
-}
 .focus{
     position: relative;
     overflow: hidden;
-    width: 375px;
+    width: 100%;
 }
 .focus img{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
-ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.focus ul{
     width: 500%;
-    height: 300px;
+    height: auto;
     overflow: hidden;
     margin-left: -100%;
 }
-ul li{
+.focus ul li{
     float: left;
     width: 20%;
     height: 100%;
@@ -37,14 +23,12 @@ ul li{
     position: absolute;
     bottom: 5px;
     right: 5px;
-    margin: 0;
-    padding: 0;
 }
-ol li {
+.point li {
     display: inline-block;
     width: 5px;
     height: 5px;
-    background-color:#fff;
+    background-color:rgb(165, 230, 80);
     list-style: none;
     border-radius: 50%;
 }
