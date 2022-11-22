@@ -1,5 +1,6 @@
+/* 加入会员的内容 */
 .VIP { 
-    width: 80%;
+    width: 70%;
     height: 100px;
     margin: 0 auto;
     margin-top: 50px;
@@ -34,15 +35,16 @@
 }
 
 .setting p {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     top: 20px;
     font-weight: bold;
 }
 
+/* 设定的内容 */
 .bind {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     top: 30px;
@@ -60,8 +62,9 @@
     width: 25px;
 }
 
+/* 社交账号的内容 */
 .contact p {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     top: 40px;
@@ -69,7 +72,7 @@
 }
 
 .contact ul {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     top: 50px;
@@ -87,8 +90,9 @@
     width: 25px;
 }
 
+/* “安全”的内容 */
 .security p {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     top: 60px;
@@ -96,7 +100,7 @@
 }
 
 .security ul {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
     top: 70px;
@@ -114,8 +118,10 @@
     width: 25px;
 }
 
+
+/* 退出登录的导航条 */
 .quit {
-    width: 80%;
+    width: 70%;
     height: 40px;
     line-height: 40px;
     text-align: center;
