@@ -129,9 +129,12 @@
     margin: 0 auto;
     position: relative;
     top: 250px;
-    color: red;
     font-weight: bold;
     background-color: rgb(245, 245, 245);
+}
+
+.quit a p {
+    color: red;
 }
 
 li:hover {
@@ -139,7 +142,8 @@ li:hover {
     border-radius: 10px;
 }
 
-.quit:hover {
+.quit a p:hover {
     color: black;
+    border-radius: 10px;
     background-color: rgb(255,103,0);
 }
