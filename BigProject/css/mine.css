@@ -62,6 +62,17 @@
     width: 25px;
 }
 
+.value{
+    display: block;
+    position: relative;
+    /* 为了使右对齐使span标签以块显示，之后会
+       向下偏移一行，一行的高度是30px,所以top=—30
+        */
+    top: -30px;
+    right: 8px;
+    text-align: right;
+}
+
 /* 社交账号的内容 */
 .contact p {
     width: 70%;
