@@ -56,3 +56,9 @@ a {
     right: 8px;
     float: right;
 }
+
+/* 全局滚动条 */
+::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+}

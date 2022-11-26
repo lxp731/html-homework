@@ -42,7 +42,7 @@ body {
     transition: 0.5s;
 }
 
-.login input[type="submit"]{
+.login input[type="submit"] {
     width: 150px;
     border: 2px solid #2ecc71;
     cursor: pointer;
